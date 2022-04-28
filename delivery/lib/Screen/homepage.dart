@@ -26,32 +26,34 @@ class HomePage extends StatelessWidget {
                 //height: 100,
                 fit: BoxFit.cover,
               ),
-              TextFormField(
-                decoration: const InputDecoration(
-                  hintText: 'Address',
+              const SizedBox(
+                height: 24,
+              ),
+              ElevatedButton(
+                child: const Text('Time to eat'),
+                onPressed: () {
+                  Navigator.pushReplacementNamed(context, '/restaurantList');
+                },
+                style: ElevatedButton.styleFrom(
+                  primary: Colors.blue[200],
+                  fixedSize: const Size(150, 50),
                 ),
+                
               ),
               const SizedBox(
                 height: 24,
               ),
               ElevatedButton(
-                child: const Text('Find some food!'),
+                child: const Text('Delivery to...'),
                 onPressed: () {
-                  Navigator.pushReplacementNamed(context, '/');
+                  Navigator.pushReplacementNamed(context, '/map');
                 },
                 style: ElevatedButton.styleFrom(
-                  primary: Colors.yellow,
+                  primary: Colors.blue[200],
+                  fixedSize: const Size(150, 50),
                 ),
               ),
-              ElevatedButton(
-                child: const Text('Admin Page'),
-                onPressed: () {
-                  Navigator.pushReplacementNamed(context, '/admin_login');
-                },
-                style: ElevatedButton.styleFrom(
-                  primary: Colors.yellow,
-                ),
-              )
+              
             ],
           ),
         ),

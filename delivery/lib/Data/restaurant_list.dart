@@ -12,14 +12,37 @@ import 'package:flutter/material.dart';
 /// For simplicity, the catalog is expected to be immutable (no products are
 /// expected to be added, removed or changed during the execution of the app).
 class RestaurantList {
-  static List<String> itemNames = [
-    'Class CAFE',
-    'KFC',
+  static List<Map> itemNames = [
+    {
+      "id": 1,
+      "image": "images/logo/burgerking.png",
+      "name": "Burger King",
+      "path": "burgerking"
+    },
+    {
+      "id": 2,
+      "image": "images/logo/hachiban.png",
+      "name": "Hachiban",
+      "path": "hachiban"
+    },
+    {
+      "id": 3,
+      "image": "images/logo/pizza.jpg",
+      "name": "The Pizza Company",
+      "path": "pizzacompany"
+    },
+    {
+      "id": 4,
+      "image": "images/logo/starbucks.png",
+      "name": "StarBucks",
+      "path": "starbucks"
+    },
   ];
 
   /// Get item by [id].
   ///
   /// In this sample, the catalog is infinite, looping over [itemNames].
+  /*
   Item getById(int id) => Item(id, itemNames[id % itemNames.length]);
 
   /// Get item by its position in the catalog.
@@ -28,6 +51,7 @@ class RestaurantList {
     // is also its id.
     return getById(position);
   }
+  */
 }
 
 @immutable
